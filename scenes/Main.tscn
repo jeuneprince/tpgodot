@@ -1,0 +1,74 @@
+[gd_scene load_steps=8 format=2]
+
+[ext_resource path="res://scenes/brique.tscn" type="PackedScene" id=1]
+[ext_resource path="res://assets/back.png" type="Texture" id=2]
+[ext_resource path="res://scripts/horizontal.gd" type="Script" id=3]
+[ext_resource path="res://scripts/vertical.gd" type="Script" id=4]
+[ext_resource path="res://scenes/path.gd" type="Script" id=5]
+[ext_resource path="res://scenes/player.tscn" type="PackedScene" id=6]
+
+[sub_resource type="Curve2D" id=1]
+_data = {
+"points": PoolVector2Array( -15.1361, -455.691, 15.1361, 455.691, 959.236, 1190.64, -23.5451, 204.275, 23.5451, -204.275, 1119.01, 1233.07, 16.8179, 94.2809, -16.8179, -94.2809, 1113.96, 384.539, 52.1356, -424.264, -52.1356, 424.264, 960.918, 469.392, 0, 0, 0, 0, 959.236, 1190.64 )
+}
+
+[node name="Main" type="Node2D"]
+
+[node name="back" type="Sprite" parent="."]
+position = Vector2( 772.557, 374.297 )
+scale = Vector2( 0.9, 0.9 )
+texture = ExtResource( 2 )
+
+[node name="brique1" parent="." instance=ExtResource( 1 )]
+position = Vector2( -50.4539, 571.81 )
+scale = Vector2( 0.5, 0.5 )
+
+[node name="brique2" parent="." instance=ExtResource( 1 )]
+position = Vector2( 73.9988, 474.266 )
+scale = Vector2( 0.5, 0.5 )
+
+[node name="brique3" parent="." instance=ExtResource( 1 )]
+position = Vector2( 534.81, 383.449 )
+scale = Vector2( 0.5, 0.5 )
+script = ExtResource( 4 )
+
+[node name="brique4" parent="." instance=ExtResource( 1 )]
+position = Vector2( 252.268, 625.627 )
+scale = Vector2( 0.5, 0.5 )
+script = ExtResource( 3 )
+
+[node name="brique5" parent="." instance=ExtResource( 1 )]
+position = Vector2( 581.9, 459.129 )
+scale = Vector2( 0.5, 0.5 )
+script = ExtResource( 4 )
+
+[node name="brique6" parent="." instance=ExtResource( 1 )]
+position = Vector2( 750.08, 517.992 )
+scale = Vector2( 0.5, 0.5 )
+script = ExtResource( 3 )
+
+[node name="brique7" parent="." instance=ExtResource( 1 )]
+position = Vector2( 451.402, -112.68 )
+scale = Vector2( 0.5, 0.5 )
+script = ExtResource( 5 )
+
+[node name="brique8" parent="." instance=ExtResource( 1 )]
+position = Vector2( 1072.98, 642.445 )
+scale = Vector2( 0.5, 0.5 )
+
+[node name="brique9" parent="." instance=ExtResource( 1 )]
+position = Vector2( 1069.62, 285.905 )
+scale = Vector2( 0.5, 0.5 )
+
+[node name="brique10" parent="." instance=ExtResource( 1 )]
+position = Vector2( 1355.52, 558.355 )
+scale = Vector2( 0.5, 0.5 )
+
+[node name="Path2D" type="Path2D" parent="."]
+position = Vector2( 0, 257.366 )
+scale = Vector2( 1, -0.107029 )
+curve = SubResource( 1 )
+
+[node name="player" parent="." instance=ExtResource( 6 )]
+position = Vector2( 113.361, 176.588 )
+scale = Vector2( 0.35, 0.35 )

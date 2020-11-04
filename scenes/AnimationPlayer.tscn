@@ -1,0 +1,46 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://assets/Wolf/Idle/__Wolf_Idle_000.png" type="Texture" id=1]
+
+[sub_resource type="Animation" id=1]
+resource_name = "marche"
+length = 4.0
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("../AnimationPlayer/loup:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 2 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 308, 101 ), Vector2( 671.392, 110.439 ) ]
+}
+
+[sub_resource type="Animation" id=2]
+resource_name = "verticale"
+length = 4.0
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("../AnimationPlayer/loup:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 2 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 687.64, 14.0708 ), Vector2( 687.64, 405.179 ) ]
+}
+
+[node name="AnimationPlayer" type="AnimationPlayer"]
+anims/marche = SubResource( 1 )
+anims/verticale = SubResource( 2 )
+
+[node name="loup" type="Sprite" parent="."]
+position = Vector2( 687.64, 143.595 )
+scale = Vector2( 0.3, 0.3 )
+texture = ExtResource( 1 )

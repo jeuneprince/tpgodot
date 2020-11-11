@@ -1,0 +1,14 @@
+[gd_scene load_steps=2 format=2]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 127.688, 53.3521 )
+
+[node name="fin" type="Area2D"]
+position = Vector2( 44.4473, 50.7968 )
+
+[node name="Polygon2D" type="Polygon2D" parent="."]
+polygon = PoolVector2Array( 289.604, 127.612, 616.609, 121.262, 613.434, 219.681, 292.777, 216.508 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2( 523.842, 149.216 )
+shape = SubResource( 1 )
